@@ -9,7 +9,7 @@ import Checkout from "./Checkout";
 const Cart = (props) => {
   const [isChekout, setIsChekout] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [didSubmit, setDidSubnit] = useState(false);
+  const [didSubmit, setDidSubmit] = useState(false);
   const cartCtx = useContext(CartContext);
 
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
@@ -40,7 +40,7 @@ const Cart = (props) => {
       }
     );
     setIsSubmitting(false);
-    setDidSubnit(true);
+    setDidSubmit(true);
     cartCtx.clearCart();
   };
 
